@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Clinical Trials Management System</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="#">TMS</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav">
+                <!-- <li class="nav-item">
+                  <a class="nav-link" href="./login.html">Log Page</a>
+                </li> -->
+                <li class="nav-item">
+                  <a class="nav-link" href="./index.html">Staff Page</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./nurse.html">Nurse Page</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./patient.html">Patient Page</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./statistics.html">Statistics Page</a>
+                </li>
+                <li class="nav-item dropdown" id="dropdown"></li>
+              </ul>
+            </div>
+          </div>
+      </nav>
+    </header>
+
+    <div class="staff_box">
+      <h1>Nurse Page</h1>
+      <div class="main_box">
+        <div class="item_box m_r_4">
+          <div class="item_content">
+            <h5 style="margin-bottom: 2vh;">Input Observations</h5>
+            <div class="mb-3 nurse_item">
+              <label for="patient1" class="nurse_label">Select Patient:</label>
+              <select class="form-select" id="patient1" aria-label="Default select Patient Name"></select>
+            </div>
+            <div class="mb-3">
+              <label for="observations" class="form-label">Input observations:</label>
+              <textarea type="text" class="form-control" id="observations" placeholder="">
+              </textarea>
+            </div>
+            <div class="button-container">
+                <button type="button" class="btn btn-primary" onclick="createObservations()">Submit</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="item_box">
+          <div class="item_content">
+            <h5 style="margin-bottom: 2vh;">Input treatment</h5>
+            <div class="mb-3 nurse_item">
+              <label for="patient2" class="nurse_label">Select Patient:</label>
+              <select class="form-select" id="patient2" aria-label="Default select Patient Name"></select>
+            </div>
+            <div class="mb-3">
+              <label for="treatment" class="form-label">Input treatment:</label>
+              <textarea type="text" class="form-control" id="treatment" placeholder="">
+              </textarea>
+            </div>
+            <div class="button-container">
+                <button type="button" class="btn btn-primary" onclick="createTreatment()">Submit</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="item_box" style="width: 100%;">
+        <h2 style="font-weight: bold;">Submit Answer</h2>
+
+        <div class="item_content">
+          <h5 style="margin-bottom: 2vh;">Select Question</h5>
+          <div class="mb-3 nurse_item">
+            <label for="patient3" class="nurse_label">Select Patient:</label>
+            <select class="form-select" id="patient3" aria-label="Default select Patient Name"></select>
+          </div>
+          <div class="mb-3 nurse_item">
+            <label for="question_text" class="nurse_label">Select Question:</label>
+            <input type="text" class="form-control nurse_control" id="question_text" placeholder="">
+          </div>
+          <div class="mb-3 nurse_item">
+            <label for="answer_text" class="nurse_label">Select Answer:</label>
+            <input type="text" class="form-control nurse_control" id="answer_text" placeholder="">
+          </div>
+          
+          <div class="mb-3">
+            <label for="notes_text" class="form-label" style="font-weight: bold;">Input Notes:</label>
+            <textarea type="text" class="form-control" id="notes_text" placeholder="">
+            </textarea>
+          </div>
+          <div class="button-container">
+              <button type="button" class="btn btn-primary" onclick="createAnswer()">Submit</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./js/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" ></script>
+    <script src="./js/header.js"></script>
+    <script src="./js/nurse.js"></script>
+
+</body>
+</html>

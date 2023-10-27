@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Clinical Trials Management System</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="#">TMS</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav">
+                <!-- <li class="nav-item">
+                  <a class="nav-link" href="./login.html">Log Page</a>
+                </li> -->
+                <li class="nav-item">
+                  <a class="nav-link" href="./index.html">Staff Page</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./nurse.html">Nurse Page</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./patient.html">Patient Page</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./statistics.html">Statistics Page</a>
+                </li>
+                <li class="nav-item dropdown" id="dropdown"></li>
+              </ul>
+            </div>
+          </div>
+      </nav>
+    </header>
+
+    <div class="staff_box">
+      <h1>Patient Page</h1>
+
+      <div class="item_box" style="width: 100%;">
+
+        <div class="item_content">
+          <h5 style="margin-bottom: 2vh;">Trial Organization List</h5>
+          <div id="trialorganization"></div>
+        </div>
+      </div>
+
+      <div class="item_box" style="width: 100%;">
+        <h2 style="font-weight: bold;">Patient Information</h2>
+
+        <div class="item_content">
+          <div class="search_box">
+            <input type="text" id="search_text" class="search_text" placeholder="Enter patient name"/>
+            <button class="search_button" onclick="search()">Search</button>
+          </div>
+
+          <div class="content_box" id="content_box"></div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./js/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" ></script>
+    <script src="./js/header.js"></script>
+    <script src="./js/patient.js"></script>
+
+</body>
+</html>

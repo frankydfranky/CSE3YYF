@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Clinical Trials Management System</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <header>
+      <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">TMS</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <!-- <li class="nav-item">
+                <a class="nav-link" href="./login.html">Log Page</a>
+              </li> -->
+              <li class="nav-item">
+                <a class="nav-link" href="./index.html">Staff Page</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./nurse.html">Nurse Page</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./patient.html">Patient Page</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./statistics.html">Statistics Page</a>
+              </li>
+              <li class="nav-item dropdown" id="dropdown"></li>
+            </ul>
+          </div>
+        </div>
+    </nav>
+  </header>
+
+    <div class="staff_box">
+      <h1>Staff Page</h1>
+      <div class="main_box">
+        <div class="item_box m_r_4">
+          <h5>Create patient records</h5>
+          <div class="item_content">
+            <div class="mb-3">
+              <label for="patientname1" class="form-label">Patient name</label>
+              <input type="text" class="form-control" id="patientname1" placeholder="">
+            </div>
+            <div class="mb-3">
+                <label for="gender" class="form-label">Gender</label>
+                <select class="form-select" id="gender" aria-label="Default select example">
+                  <option value="Man">Man</option>
+                  <option value="Woman">Woman</option>
+                </select>
+            </div>
+            <div class="mb-3">
+              <label for="age" class="form-label">Age</label>
+              <input type="number" class="form-control" id="age" placeholder="">
+          </div>
+            <div class="button-container">
+                <button type="button" class="btn btn-primary" onclick="createPatient()">Submit</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="item_box">
+          <h5>Create clinical studies</h5>
+          <div class="item_content">
+            <div class="mb-3">
+              <label for="studiesname1" class="form-label">Studies name</label>
+              <input type="text" class="form-control" id="studiesname1" placeholder="">
+            </div>
+            <div class="mb-3">
+                <label for="description1" class="form-label">Description of studies</label>
+                <textarea type="text" class="form-control" id="description1" placeholder=""></textarea>
+            </div>
+            <div class="button-container">
+                <button type="button" class="btn btn-primary" onclick="createClinical()">Submit</button>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="item_box m_r_4">
+          <h5>Create trial organization</h5>
+          <div class="item_content">
+            <div class="mb-3">
+              <label for="organizationname" class="form-label">Organization name</label>
+              <input type="text" class="form-control" id="organizationname" placeholder="">
+            </div>
+            <div class="mb-3">
+                <label for="description2" class="form-label">Description of organization</label>
+                <textarea type="text" class="form-control" id="description2" placeholder=""></textarea>
+            </div>
+            <div class="button-container">
+                <button type="button" class="btn btn-primary"  onclick="createTrialorganization()">Submit</button>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="item_box ">
+          <h5>Manage stuies</h5>
+          <div class="item_content">
+              <div class="mb-3">
+                <label for="studies" class="form-label">Studies name</label>
+                <select class="form-select" id="studiesname" aria-label="Default select studiesname"></select>
+              </div>
+              <div class="mb-3" style="display: flex;">
+                <p style="width: 50%;">
+                  <label for="patient" class="">Add patient</label>
+                  <select class="form-select" id="patient" aria-label="Default select patient"></select>
+                </p>
+                <p style="margin-left: 15%;">
+                  <label for="date" class="">Date</label>
+                  <input type="date" class="form-control" id="date" placeholder="">
+                </p>
+              </div>
+              <div class="button-container">
+                <button type="button" class="btn btn-primary" onclick="mangeSubmit()">Submit</button>
+              </div>
+
+              <table class="table" style="margin-top: 1rem;">
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Studies name</th>
+                    <th scope="col">Patient name</th>
+                    <th scope="col">Date</th>
+                    <th scope="col">Option</th>
+                  </tr>
+                </thead>
+                <tbody id="managestudies">
+                 
+                </tbody>
+              </table>
+
+          </div>
+          
+        </div>
+      </div>
+    </div>
+
+    <script src="./js/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" ></script>
+    <script src="./js/header.js"></script>
+    <script src="./js/index.js"></script>
+</body>
+</html>

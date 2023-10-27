@@ -1,0 +1,136 @@
+body {
+    font-family: Verdana, sans-serif;
+    text-align: center;
+    background: linear-gradient(0deg, rgb(224, 216, 236), rgb(190, 187, 244));
+
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Optional: keeps the background fixed while scrolling */
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 90vh;
+}
+
+h1 {
+    font-size: 36px; /* Increased font size for the title */
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+p {
+    font-size: 18px;
+    margin-bottom: 20px; /* Add some space below the paragraph */
+}
+.staff_box{
+    text-align: left;
+    min-height: 90vh;
+    padding: 2vw;
+}
+.main_box{
+    margin-top: 7vh;
+    display: flex;
+    flex-wrap: wrap; 
+    align-content: flex-start;
+}
+ .item_box{
+    width: 48%;
+    margin-bottom: 3rem;
+}
+ .item_box h5{
+    font-weight: bold;
+}
+ .item_box .item_content{
+    background: #f0f8ff4f;
+    padding: 2rem;
+    border-radius: 1rem;
+    margin-top: 1rem;
+}
+.m_r_4{
+    margin-right: 4%;
+}
+.main_box .form-label,.nurse_label{
+    font-weight: bold;
+}
+.nurse_item{
+    display: flex;
+}
+.nurse_label{
+    width: 50%;
+    display: inline-block;
+    line-height: 5vh;
+}
+.nurse_control{
+    width: 50%;
+}
+
+.search_box{
+    display: flex;
+    justify-content: center;
+}
+.search_text{
+    width: 512px;
+    height: 16px;
+    padding: 12px 16px;
+    font-size: 16px;
+    margin: 0;
+    vertical-align: top;
+    outline: 0;
+    box-shadow: none;
+    border-radius: 10px 0 0 10px;
+    border: 2px solid #c4c7ce;
+    background: #fff;
+    color: #222;
+    overflow: hidden;
+    box-sizing: content-box;
+}
+.search_button{
+    cursor: pointer;
+    width: 108px;
+    height: 44px;
+    line-height: 45px;
+    line-height: 44px\9;
+    padding: 0;
+    background: 0 0;
+    background-color: #4e6ef2;
+    border-radius: 0 10px 10px 0;
+    font-size: 17px;
+    color: #fff;
+    box-shadow: none;
+    font-weight: 400;
+    border: none;
+    outline: 0;
+}
+.content_box{
+
+}
+.text_align_center{
+    text-align: center;
+    margin-top: 3rem;
+    font-weight: bold;
+}
+.contnet_item{
+    margin-top: 2rem;
+    margin-bottom: 5rem;
+    border-bottom: 3px solid white;
+    padding-bottom: 1rem;
+}
+
+#main,#line{
+    width: 70vw;
+    height: 400px;
+    user-select: none;
+    position: relative;
+    margin-top: 2rem;
+    background: #ffffff8f;
+    padding: 2rem;
+    border-radius: 1rem;
+}
+.flex_content{
+    display: flex;
+
+}
